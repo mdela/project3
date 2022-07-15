@@ -17,5 +17,7 @@ First, I calculate the number of miles per dollar based on the car's MPG and the
 Then, I multiply this rate by the distance to the passenger's home.
 Finally, the program tells me how much each passenger has to pay based on how far it'll take to get to their home.
 
+
+# update log
 Version 1.0
 * initial commit
