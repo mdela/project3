@@ -3,6 +3,11 @@ import java.util.Scanner;
 public class GasMoneyCalc {
 
 	public static void main(String[] args) {
+		
+		// TODO
+		// - refine the summary tab
+		// - determine who gets dropped off in order
+		// - add fees
 	
 		Scanner input = new Scanner(System.in);
 		
@@ -23,9 +28,11 @@ public class GasMoneyCalc {
 		System.out.println(); // line break
 		
 		// gather passengers
+		System.out.print("-- Add Passengers --");
 		// create array of passengers, 4 max
 		Passenger[] car = new Passenger[4];
 		for (int i = 0; i < car.length; i++) {
+			System.out.println();
 			String name;
 			int distance;
 			int fare;
@@ -40,7 +47,7 @@ public class GasMoneyCalc {
 			distance = input.nextInt();
 			
 			// calculate how much the passenger has to pay
-			fare = Math.round(distance / milesPerDollar);
+			fare = (int)(Math.ceil(distance / milesPerDollar));
 			
 			car[i] = new Passenger(name, distance, fare);
 			System.out.println(car[i].getName() + " has been added.");
