@@ -3,6 +3,7 @@ I wrote this program because we now unfortunately live in a time where we have t
 
 This program calculates how much each passenger should pay their best friend, the driver.
 
+# setup
 I utilized objects to write this program. 
 - Passenger.java is the *object* file.
 - GasMoneyCalc.java is the *main* file.
@@ -10,9 +11,8 @@ I utilized objects to write this program.
 Each passenger has their own:
 * name
 * distance to their home
-* how much they owe the driver
+* fare
 
-# setup
 First, I calculate the number of miles per dollar based on the car's MPG and the current average gas price.
 Then, I multiply this rate by the distance to the passenger's home.
 Finally, the program tells me how much each passenger has to pay based on how far it'll take to get to their home.
