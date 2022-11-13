@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 
 # get input from driver
 mpg = int(input("Enter car's MPG: "))
-currRange = int(input("Enter car's current range in miles: "))
-maxRange = int(input("Enter car's max range in miles: "))
+#currRange = int(input("Enter car's current range in miles: "))
+#maxRange = int(input("Enter car's max range in miles: "))
 priceGal = float(input("Enter current price per gallon: "))
 
 fares = []
@@ -19,11 +19,12 @@ while True:
         continue
 
     name = str(input("Enter passenger name: "))
-    distance = int(input("Enter passenger's distance to home:"))
+    distance = int(input("Enter passenger's distance to home: "))
     # add the passenger
     passengers[name] = distance
-    fares.append(int(round((distance / (mpg / priceGal)))))
+    fares.append(int((2*(round((distance / (mpg / priceGal)))))))
     numPassengers += 1
+    print ("\n")
 
 if passengers:
 
