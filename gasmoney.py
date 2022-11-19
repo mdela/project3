@@ -6,6 +6,8 @@ mpg = int(input("Enter car's MPG: "))
 #maxRange = int(input("Enter car's max range in miles: "))
 priceGal = float(input("Enter current price per gallon: "))
 
+cities = ['Koreatown', 'Los Angeles', 'Glendale', 'Hollywood', 'Santa Monica']
+
 fares = []
 passengers = {}
 numPassengers = 0
@@ -20,9 +22,15 @@ while True:
 
     name = str(input("Enter passenger name: "))
     distance = int(input("Enter passenger's distance to home: "))
+    city = str(input("Enter drop-off city: "))
     # add the passenger
     passengers[name] = distance
-    fares.append(int((2*(round((distance / (mpg / priceGal)))))))
+
+    # inconvenience fee for dropping off the passenger at one of California's major cities
+    if city.title() in cities:
+        inconvenienceFee = 3
+        
+    fares.append(int((2*(round((distance / (mpg / priceGal)))) + inconvenienceFee)))
     numPassengers += 1
     print ("\n")
 
