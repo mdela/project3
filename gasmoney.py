@@ -64,3 +64,6 @@ fig.update_traces(marker_line_color='black', marker_line_width=1.5,)
 
 # then, plot
 fig.show()
+
+# extract the dataframe onto a CSV file
+df.to_csv('passengers.csv', index=False)
